@@ -1,0 +1,1314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  background: url('bg_2.jpg') center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 25px 50px;
+  margin-left: 20%;
+  margin-bottom: 20%;
+}
+
+.logo span {
+  color: crimson;
+}
+
+nav {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  margin-right: 20%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: crimson;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 150px;
+  margin-left: 20%;
+  margin-bottom: 3%;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.breadcrumb a.current {
+  color: crimson;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+  color: crimson;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 0; /* Push wave behind everything */
+  line-height: 0;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 370px; /* FIXED: was 1250px, way too big */
+}
+                                                            /* <!-- second page --> */
+#thirdpageheading{
+ padding: 0 0 8px;
+ font: 36px;
+ text-align: center;
+ margin-top: 10%;
+ margin-bottom: 5%;
+ color: black;
+}
+ /* AVO Portfolio Section Styles */
+.avo-portfolio-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.avo-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.avo-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.avo-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.avo-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.avo-content {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.avo-text-column {
+  flex: 1;
+}
+
+.avo-paragraph {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.avo-cta {
+  text-align: center;
+}
+
+.avo-button {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 2px solid #e74c3c;
+}
+
+.avo-button:hover {
+  background-color: transparent;
+  color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .avo-portfolio-section {
+    padding: 70px 0;
+  }
+  
+  .avo-title {
+    font-size: 36px;
+  }
+  
+  .avo-subtitle {
+    font-size: 18px;
+  }
+  
+  .avo-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avo-portfolio-section {
+    padding: 50px 0;
+  }
+  
+  .avo-title {
+    font-size: 28px;
+  }
+  
+  .avo-subtitle {
+    font-size: 16px;
+  }
+  
+  .avo-button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+.portfolio-container {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15% ;
+    padding: 0 40px; 
+justify-content: space-evenly;
+  }
+
+.portfolio-content {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 18%;
+}
+
+.portfolio-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+ height: 450px;
+ width: 350px;
+    object-fit: cover; /* Ensures image covers area while maintaining aspect ratio */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Rest of your CSS remains the same */
+.portfolio-item {
+  margin-top: 20%;
+    height:360px ;
+    width: 570px;
+    font-size: 16px;
+}
+
+.portfolio-category {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.portfolio-title {
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.portfolio-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 20px 0;
+}
+
+.portfolio-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.author-company {
+    color: #777;
+    font-size: 12px;
+}
+
+.portfolio-button {
+    color: black;
+    border-radius: 2px;
+    border-color: black;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        margin: 60px auto;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .portfolio-content {
+        order: 2;
+    }
+    
+    .portfolio-image {
+        order: 1;
+        width: 100%;
+    }
+    
+    .project-image {
+        max-height: 350px; /* Adjusted for mobile */
+    }
+}
+
+/* Main container styles */
+.project-container {
+   display: flex;
+    margin-left: 15%;
+    margin-right: 15% ;
+
+    padding: 0 40px;
+    gap: 40px;
+    align-items: flex-start; /* Changed from center to flex-start */
+}
+
+/* Content section (right side) */
+.project-content {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Image section (left side) */
+.project-visual {
+    flex: 0 0 45%;
+}
+
+.visual-image {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Project card styles */
+.project-card {
+    width: 570px;
+    height: 360px;
+    text-align: right;
+    padding: 40px 0 40px 40px;
+}
+
+.project-type {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.project-name {
+    font-size: 40px;
+    color: #000;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    height: 39px;
+    line-height: 1.2;
+}
+
+.project-details {
+   font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    text-align: right; /* Align text to the right */
+    margin: 0 0 30px 0; /* Remove margin-right: 700px */
+    width: 100%; /* Let it take full width of parent */
+}
+
+/* Creator section */
+.project-creator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+}
+
+.creator-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f1f1f1;
+}
+
+.creator-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.creator-name {
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.creator-company {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Button styles */
+.project-cta {
+   
+    color:black;
+    border-radius: 2px;
+    border-color: black;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    display: block;
+}
+
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .project-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .project-content {
+        justify-content: center;
+        padding-top: 40px;
+    }
+    
+    .project-card {
+        text-align: center;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .project-creator {
+        justify-content: center;
+    }
+    
+    .creator-info {
+        align-items: center;
+    }
+    
+    .project-cta {
+        margin: 0 auto;
+    }
+}
+                                                          /* <!-- third page --> */
+
+.circle-pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center; /* This centers the items horizontally */
+    margin: 0 auto; /* This helps with centering the container */
+    width: 100%; /* Takes full width to allow proper centering */
+    padding: 10px 0; /* Optional: adds some vertical spacing */
+    margin-top: 5%;
+}
+
+.circle-pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.circle-number {
+    color: #333;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.circle-nav {
+    color:black;
+    /* background-color: #666; */
+    font-size: 18px;
+}
+
+.circle-pagination a:hover {
+    background-color:red;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Active state (optional) */
+.circle-number.active {
+    background-color:red;
+    color: white;
+}
+                                                  /* footer */
+/* Footer Styles */
+/* === Footer Wave === */
+
+.footer-wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -1px;
+}
+.footer-wave {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  position: relative;
+  top: 1px;
+  background-color: transparent; /* Make the area above the wave see-through */
+}
+
+.footer-wave path {
+  fill: #000; /* Keep the wave itself black */
+}
+/* === Footer Styles === */
+.footer {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  padding-top: 60px;
+}
+
+.footer-main {
+  padding: 80px 0;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 40px;
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 18px;
+  color: #fff;
+  background: #222;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.footer-link {
+  display: block;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  text-decoration: none;
+  padding-left: 0;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+  margin-right: 12px;
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.contact-item span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom {
+  background-color: #0f0f0f;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.footer-bottom .heart {
+  color: #ccc;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.footer-bottom .colorlib {
+  color: #e83e8c;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-column {
+    flex: 0 0 45%;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== RESPONSIVE FIXES ===== */
+/* Tablet (768px-1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    height: 80vh;
+  }
+  
+  .hero-content {
+    margin-left: 10%;
+    width: 80%;
+  }
+  
+  .portfolio-container,
+  .project-container {
+    margin: 60px 10%;
+  }
+  
+  .portfolio-content {
+    margin-right: 10%;
+  }
+  
+  .project-image,
+  .visual-image {
+    width: 300px;
+    height: 450px;
+  }
+}
+
+/* Mobile (0-767px) */
+@media only screen and (max-width: 767px) {
+  .hero {
+    height: 90vh;
+    background-position: center 30%;
+  }
+  
+  .wave svg {
+    height: 80px;
+  }
+  
+  #menu-toggle {
+    display: block;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .hero-content {
+    width: 90%;
+    margin: 0 auto;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  #thirdpageheading {
+    font-size: 2rem;
+    margin: 60px 0 30px;
+  }
+  
+  .portfolio-container,
+  .project-container {
+    flex-direction: column;
+    margin: 40px 5%;
+  padding: 0;
+  }
+  
+  .portfolio-content,
+  .project-content {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .portfolio-image,
+  .project-visual {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .project-image,
+  .visual-image {
+    width: 100%;
+    max-width: 382px;
+    height: auto;
+    max-height: 550px;
+  }
+  
+  .portfolio-item,
+  .project-card {
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .project-details {
+    text-align: left;
+  }
+  
+  .portfolio-author,
+  .project-creator {
+    justify-content: center;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-heading:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile (0-480px) */
+@media only screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-title,
+  .project-name {
+    font-size: 1.5rem;
+  }
+  
+  .portfolio-button,
+  .project-cta {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .circle-pagination {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============= RESPONSIVE DESIGN FOR TABLET AND MOBILE ============= */
+
+@media screen and (max-width: 1024px) {
+  header.hero nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  header.hero .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .portfolio-container,
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .portfolio-image,
+  .project-visual,
+  .portfolio-content,
+  .project-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .portfolio-item,
+  .project-card {
+    text-align: center;
+  }
+
+  .portfolio-author,
+  .project-creator {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-button,
+  .project-cta {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ============= MOBILE STYLES ============= */
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  header.hero {
+    padding: 20px 10px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+  }
+
+  .portfolio-title,
+  .project-name {
+    font-size: 20px;
+  }
+
+  .portfolio-description,
+  .project-details {
+    font-size: 14px;
+  }
+
+  .author-image,
+  .creator-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .circle-number,
+  .circle-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .footer-wave svg,
+  .wave svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+}
+
+/* ============= SMALL DEVICE FIXES ============= */
+
+@media screen and (max-width: 480px) {
+  .project-image,
+  .visual-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-column h3,
+  .footer-heading {
+    font-size: 16px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .contact-item span {
+    font-size: 14px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  #thirdpageheading {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+
+                                                                 /* code of menu */
+/* Base Header Styling */
+.hero-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero .logo {
+  font-size: 28px;
+  font-family: aldrich, sans-serif;
+  color: white;
+}
+
+.hero .logo span {
+  color: red;
+}
+
+.desktop-nav {
+  display: block;
+}
+
+.desktop-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin-top: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+}
+
+.desktop-nav ul li a.active {
+  color: red;
+}
+
+/* Menu toggle icon (hamburger) - hidden on desktop */
+#menu-toggle {
+  display: none;
+}
+
+/* MOBILE RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 60px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Mobile Menu Overlay */
+  #mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    transition: height 0.4s ease;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+#mobile-menu-overlay.open {
+  height: auto;
+  min-height: 60%; /* enough space for 5 links */
+  pointer-events: auto;
+}
+
+
+  #mobile-menu {
+    background: #111;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+  }
+
+  #mobile-menu-overlay.open #mobile-menu {
+    transform: translateY(0);
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-navbar-list li {
+    margin-bottom: 15px;
+  }
+
+  .mobile-navbar-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+  }
+
+  #close-btn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* PREVENT MOBILE MENU OVERLAY FROM BLOCKING DESKTOP CLICKS */
+@media (min-width: 769px) {
+  #mobile-menu-overlay {
+    display: none !important;
+    height: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
+
+  #mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Desktop View Fixes */
+@media (min-width: 1440px) {
+    body {
+        max-width: 1400px; /* keeps content from stretching too much */
+        margin: 0 auto; /* centers everything */
+    }
+
+    .container, 
+    .section-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Example: remove huge margins that push elements off center */
+    .hero-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Adjust any fixed-position or absolute-positioned elements */
+    .header, .footer {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        /* amimation */
+                        @keyframes bottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-up.visible {
+  animation: bottomToTop 1s ease-out forwards;
+}

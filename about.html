@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AVO | About</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+  <div class="hero-topbar">
+    <div class="logo">a<span>v</span>o</div>
+
+    <!-- Desktop Navigation (inside topbar) -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a  href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="menu-toggle">&#9776;</div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="#">Home</a> <span>&#10095;</span>
+      <a href="#" class="current">About Us</a>
+    </div>
+    <h1>About Us</h1>
+  </div>
+
+  <!-- Wave SVG -->
+  <div class="wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f3f4f5" fill-opacity="1"
+        d="M0,96L480,192L960,288L1440,192L1440,320L960,320L480,320L0,320Z"></path>
+    </svg>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay">
+    <div id="mobile-menu">
+      <div class="mobile-menu-header">
+        <span id="close-btn">&times;</span>
+      </div>
+      <ul class="mobile-navbar-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const overlay = document.getElementById("mobile-menu-overlay");
+    const closeBtn = document.getElementById("close-btn");
+
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      overlay.classList.add("open");
+    });
+
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      overlay.classList.remove("open");
+    });
+
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) {
+        overlay.classList.remove("open");
+      }
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2 // Trigger when 20% of element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, observerOptions);
+
+    // Target all sections and animated elements
+    const animatedElements = document.querySelectorAll(
+      "header, .hero, #secondpageheading, #mainpagesecond, #secondmaindiv, #services-section, #thirdpageheading, .portfolio-container, .project-container, .testimonials, .project-estimate, #lastheading, #allimages, footer"
+    );
+
+    animatedElements.forEach((el) => {
+      el.classList.add("animate-up"); // Add base animation class
+      observer.observe(el);
+    });
+  });
+</script>
+
+</body>
+</html>
+                                                          <!-- second page -->
+ <h2 id="secondpageheading">About us</h2>
+<div id="mainpagesecond">
+<div id="image1">
+  <img src="IMG-20250730-WA0009.jpg" alt="pin">
+
+  <h3>UI/UX Design</h3>
+</div>
+<div id="image2">
+  <img src="IMG-20250730-WA0010.jpg" alt="pin">
+<br>
+  <h3>Web Development</h3>
+</div>
+<div id="image3">
+  <img src="IMG-20250730-WA0011.jpg" alt="pin">
+<br>
+  <h3>Product Design</h3>
+</div>
+<div id="image4">
+  <img src="IMG-20250730-WA0012.jpg" alt="pin">
+<br>
+  <h3>Mobile Apps</h3>
+</div>
+<div id="image5">
+  <img src="IMG-20250730-WA0013.jpg" alt="pin">
+<br>
+  <h3>SEO</h3>
+</div>
+</div>
+<div id="secondmaindiv">
+  <div id="a1">
+    <h3 id="onea1">Welcome to AVO A</h3>
+    <h3 id="onea1">Personal Portfolio</h3>
+    <h3 id="onea1">Web Agency</h3>
+    <p id="twoa1">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+  </div>
+
+  <img id="onea2" src="about (1).jpg" alt="in office">
+
+  <div id="a3">
+    <p id="onea3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    <button onclick="openSameSite()" id="twoa3">View all projects</button>
+  </div>
+</div>
+<script>
+function openSameSite() {
+  window.open(window.location.href, "_blank");
+}
+</script>
+<!-- ✅ START: Updated Services Section -->
+<!-- Wave cover above services section -->
+
+<!-- Services Section -->
+<div id="services-section">
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-number-box">
+        <span class="service-number">01</span>
+        <div class="number-line"></div>
+      </div>
+      <div class="service-text">
+        <h3 class="service-title">Search Engine</h3>
+        <h3 class="service-title">Optimization</h3>
+      </div>
+    </div>
+    <p class="service-description">Far far away, behind the word mountains</p>
+  </div>
+
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-number-box">
+        <span class="service-number">02</span>
+        <div class="number-line"></div>
+      </div>
+      <div class="service-text">
+        <h3 class="service-title">Search Engine</h3>
+        <h3 class="service-title">Optimization</h3>
+      </div>
+    </div>
+    <p class="service-description">Far far away, behind the word mountains</p>
+  </div>
+
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-number-box">
+        <span class="service-number">03</span>
+        <div class="number-line"></div>
+      </div>
+      <div class="service-text">
+        <h3 class="service-title">Search Engine</h3>
+        <h3 class="service-title">Optimization</h3>
+      </div>
+    </div>
+    <p class="service-description">Far far away, behind the word mountains</p>
+  </div>
+
+</div>
+
+                                                  <!-- page third -->
+
+<div class="project-estimate">
+  <div class="estimate-container">
+    <div class="estimate-content">
+      <h2>Fill in the brief and get the project estimate</h2>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      <button class="estimate-button">Get Started</button>
+    </div>
+  </div>
+</div>
+                                                       <!-- page four -->
+
+<section class="team-section">
+    <div class="top-wave-cover"> </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#f3f4f5" fill-opacity="1" d="M0,96L480,192L960,288L1440,192L1440,0L960,0L480,0L0,0Z"></path>
+  </svg>
+   <h2 class="section-title">EXPERT TEAM</h2>
+  <div class="team-container">
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-1.jpg" alt="John Wilson">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">JOHN <br> WILSON</h3>
+      <p class="role">Web Designer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-2.jpg" alt="Robert Wills">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">ROBERT <br> WILLS</h3>
+      <p class="role">Web Developer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-3.jpg" alt="Mike Smith">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">MIKE SMITH</h3>
+      <p class="role">Graphic Designer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-4.jpg" alt="Adrian Henderson">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">ADRIAN <br> HENDERSON</h3>
+      <p class="role">System Analyst</p>
+    </div>
+  </div>
+</section>
+<section class="team-section">
+
+ <div class="team-container">
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-5.jpg" alt="John Wilson">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">JOHN <br> WILSON</h3>
+      <p class="role">Web Designer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-6.jpg" alt="Robert Wills">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">ROBERT <br> WILLS</h3>
+      <p class="role">Web Developer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-7.jpg" alt="Mike Smith">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">MIKE <br> SMITH</h3>
+      <p class="role">Graphic Designer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="team-image">
+        <img src="team-8.jpg" alt="Adrian Henderson">
+        <div class="social-overlay">
+          <div class="social-icons left">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3 class="member-name">ADRIAN <br> HENDERSON</h3>
+      <p class="role">System Analyst</p>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <h2 class="section-title">CLIENTS SAYS ABOUT US?</h2>
+
+  <div class="testimonial-slider">
+    <div class="testimonial-track" id="testimonialTrack">
+      <!-- 5 testimonial cards -->
+      <div class="testimonial-card">
+        <span class="quote-icon">❝</span>
+        <p class="testimonial-text">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+        <div class="testimonial-profile">
+          <img src="person_1.jpg" alt="person" />
+          <div>
+            <h4 class="name">Roger Scott</h4>
+            <span class="title">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-icon">❝</span>
+        <p class="testimonial-text">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+        <div class="testimonial-profile">
+          <img src="person_2.jpg" alt="person" />
+          <div>
+            <h4 class="name">Roger Scott</h4>
+            <span class="title">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-icon">❝</span>
+        <p class="testimonial-text">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+        <div class="testimonial-profile">
+          <img src="person_3.jpg" alt="person" />
+          <div>
+            <h4 class="name">Roger Scott</h4>
+            <span class="title">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-icon">❝</span>
+        <p class="testimonial-text">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+        <div class="testimonial-profile">
+          <img src="person_1.jpg" alt="person" />
+          <div>
+            <h4 class="name">Roger Scott</h4>
+            <span class="title">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-icon">❝</span>
+        <p class="testimonial-text">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+        <div class="testimonial-profile">
+          <img src="person_2.jpg" alt="person" />
+          <div>
+            <h4 class="name">Roger Scott</h4>
+            <span class="title">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-dots">
+    <span class="dot active" onclick="moveToCustomSlide(0)"></span>
+    <span class="dot" onclick="moveToCustomSlide(1)"></span>
+    <span class="dot" onclick="moveToCustomSlide(2)"></span>
+    <span class="dot" onclick="moveToCustomSlide(3)"></span>
+    <span class="dot" onclick="moveToCustomSlide(4)"></span>
+  </div>
+</section>
+<script>
+  const track = document.getElementById("testimonialTrack");
+  const originalCards = Array.from(track.children);
+
+  const customOrders = [
+    [0, 1, 2], // 1st rotation: 1,2,3
+    [3, 0, 1], // 2nd: 4,1,2
+    [2, 3, 0], // 3rd: 3,4,1
+    [1, 2, 3], // 4th: 2,3,4
+    [0, 1, 2]  // 5th: 1,2,3
+  ];
+
+  function moveToCustomSlide(index) {
+    const order = customOrders[index];
+    const newCards = order.map(i => originalCards[i].cloneNode(true));
+
+    // Replace track content
+    track.innerHTML = "";
+    newCards.forEach(card => track.appendChild(card));
+
+    // Reset transform
+    track.style.transform = `translateX(0)`;
+
+    // Update active dot
+    document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+    document.querySelectorAll(".dot")[index].classList.add("active");
+  }
+
+  // Initial view
+  window.addEventListener("DOMContentLoaded", () => {
+    moveToCustomSlide(0);
+  });
+</script>                                                      
+                                                     <!-- footer -->
+<!-- Unique wave above the footer -->
+<!-- Unique wave above the footer -->
+<div class="footer-wave">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#000000" fill-opacity="1"
+      d="M0,256L360,96L720,160L1080,224L1440,288L1440,320L1080,320L720,320L360,320L0,320Z">
+    </path>
+  </svg>
+</div>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-container">
+
+      <!-- Column 1: Brand and Social -->
+      <div class="footer-column">
+        <h2 class="brand">avo</h2>
+        <p class="footer-text">
+          Far far away, behind the word mountains,<br />
+          far from the countries.
+        </p>
+        <div class="social-icons">
+          <a href="about.html"><i class="fab fa-twitter"></i></a>
+          <a href="about.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="about.html"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Community -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Community</h3>
+        <a class="footer-link" href="about.html">› Projects</a>
+        <a class="footer-link" href="about.html">› Team</a>
+        <a class="footer-link" href="about.html">› Reviews</a>
+        <a class="footer-link" href="about.html">› FAQs</a>
+      </div>
+
+      <!-- Column 3: About Us -->
+      <div class="footer-column">
+        <h3 class="footer-heading">About Us</h3>
+        <a class="footer-link" href="about.html">› Our Story</a>
+        <a class="footer-link" href="about.html">› Meet the team</a>
+        <a class="footer-link" href="about.html">› Careers</a>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Company</h3>
+        <a class="footer-link" href="about.html">› About Us</a>
+        <a class="footer-link" href="about.html">› Press</a>
+        <a class="footer-link" href="about.html">› Contact</a>
+        <a class="footer-link" href="about.html">› Careers</a>
+      </div>
+
+      <!-- Column 5: Contact -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Have a Questions?</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>203 Fake St. Mountain View,<br>San Francisco,<br>California, USA</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+2 392 3929 210</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@yourdomain.com</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright ©2025 All rights reserved |
+      This template is made with <span class="heart">♥</span> by <span class="colorlib">Colorlib</span>
+    </p>
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
